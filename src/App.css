@@ -1,38 +1,163 @@
-.App {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, menu, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; box-sizing: border-box;} article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section { display: block; } *[hidden] { display: none; } body { line-height: 1; } menu, ol, ul { list-style: none; } blockquote, q { quotes: none; }
+a {text-decoration: none;}
+a:visited,
+a:link {color: #333;}
+body {min-width: 353px;}
+
+.header {
+  padding: 9px 11px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+}
+
+.header ul li {
+  padding-left:15px;
+  font-size: 13px;
+}
+
+.header .link {
+  display: block;
+  padding-bottom: 3px;
+}
+
+.header .link:hover {
+  text-decoration: underline;
+}
+
+.header .menuBtn {
+  margin: 0 2px 0 12px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('/public/images/ico_menu.png') no-repeat center;
+  background-size: 100% auto;
+  text-indent: -9999px;
+}
+
+.header .userBtn {
+  margin: 3px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-top: 2px solid #e92d18;
+  border-bottom: 2px solid #3174f1;
+  border-right: 2px solid #249a41;
+  border-left: 2px solid #f6ad01;
+  border-radius: 50%;
+}
+
+.header .userBtn span {
+  display: block;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 32px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #fff;
+  background-color: #bf360c;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.contents {
+  margin-top: 10.7vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contents .logo {
+  margin-bottom: 36px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contents .searchBox {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  max-width: 562px;
+  height: 44px;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+  border-radius: 22px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contents .searchBox .searchIco {
+  width: 55px;
+  border: none;
+  background: transparent url('/public/images/search.svg') no-repeat center;
+  background-size: 20px;
+  text-indent: -9999px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contents .searchBox input {
+  flex-grow: 1;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+}
+
+.contents .searchBox input::placeholder {
+  line-height: 44px;
+}
+
+.contents .searchBox .voiceBtn {
+  width: 60px;
+  border: none;
+  background: transparent url('/public/images/mic.svg') no-repeat center;
+  background-size: 21px auto;
+  text-indent: -9999px;
+}
+
+.visitList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  max-width: 500px;
+}
+
+.visitList a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 112px;
+  border-radius: 5px;
+}
+
+.visitList a:hover {
+  background-color: #e8e8e9;
+}
+
+.visitList .ico {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 48px;
+  height: 48px;
+  background-color: #f1f3f4;
+  border-radius: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.visitList .ico img {
+  max-width: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.visitList .tit {
+  margin: 16px 0 19px;
+  padding: 0 14px;
+  width: 100%;
+  font-size: 13px;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
